@@ -1,8 +1,12 @@
 package com.rawals.trakingdaw;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -21,6 +25,9 @@ import com.rawals.trakingdaw.dummy.DummyContent;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,FragmentInicio.OnFragmentInteractionListener,FragmentMapa.OnFragmentInteractionListener,FragmentListaRutas.OnListFragmentInteractionListener {
+
+    LocationManager locationManager;
+    AlertDialog alert = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +56,12 @@ public class MainActivity extends AppCompatActivity
 //
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        //Miramos si esta encendido en GPS
+        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+            //Alerta para que el usuario active el GPS
+            AlertNoGps();
+        }
     }
 
     @Override
@@ -133,6 +146,36 @@ public class MainActivity extends AppCompatActivity
     public void onListFragmentInteraction(DummyContent.DummyItem item) {
 
     }
+    private void AlertNoGps() {
 
+        final AlertDialog.Builder buider = new AlertDialog.Builder(this);
+        buider.setMessage("El GPS esta desactivado, ¿Quieres activarlo?")
+                .setCancelable(false)
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+
+                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        alert = buider.create();
+        alert.show();
+    }
+
+
+    //Liberar memoria despues de la alerta
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if (alert != null){
+            alert.dismiss();
+        }
+    }
 
 }
