@@ -3,12 +3,14 @@ package com.rawals.trakingdaw;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -20,33 +22,28 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.rawals.trakingdaw.dummy.DummyContent;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,FragmentInicio.OnFragmentInteractionListener,FragmentMapa.OnFragmentInteractionListener,FragmentListaRutas.OnListFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, FragmentInicio.OnFragmentInteractionListener, FragmentListaRutas.OnListFragmentInteractionListener, MapFragment.OnFragmentInteractionListener {
 
     LocationManager locationManager;
     AlertDialog alert = null;
+    private GoogleMap map;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // initialising the object of the FragmentManager. Here I'm passing getSupportFragmentManager(). You can pass getFragmentManager() if you are coding for Android 3.0 or above.
+
+
         //Barra de arriba
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-        //Boton de abajo que saca el snackbar
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         //Enlaza con el Navigation drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -58,10 +55,13 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         //Miramos si esta encendido en GPS
-        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+
+        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             //Alerta para que el usuario active el GPS
             AlertNoGps();
+
         }
+
     }
 
     @Override
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity
             fragment = new FragmentInicio();
             FragmentTransaction = true;
         } else if (id == R.id.nav_gallery) {
-            fragment = new FragmentMapa();
+            fragment = new MapFragment();
             FragmentTransaction = true;
         } else if (id == R.id.nav_slideshow) {
             fragment = new FragmentListaRutas();
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity
 
 
         if (FragmentTransaction){
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_main,fragment).commit();
             //Nombre en la etiqueta
             item.setChecked(true);
             getSupportActionBar().setTitle(item.getTitle());
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
