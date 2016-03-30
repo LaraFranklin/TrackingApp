@@ -8,16 +8,16 @@
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "com.rawals.trakingdaw.LegalNoticesActivity"/>
       <point      
-        x = "1884"      
-        y = "4"/>
+        x = "2800"      
+        y = "8"/>
     </statePointEntry>
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "com.rawals.trakingdaw.MainActivity"/>
       <point      
-        x = "128"      
-        y = "-8"/>
+        x = "80"      
+        y = "0"/>
     </statePointEntry>
     <statePointEntry>
       <state      

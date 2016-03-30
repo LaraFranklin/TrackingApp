@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -34,18 +35,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link MapFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link MapFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMyLocationChangeListener, GoogleMap.OnInfoWindowClickListener, View.OnClickListener, GoogleMap.OnMyLocationButtonClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,14 +55,16 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private Button bmapa;
     private Button bhibrido;
     private Button bterreno;
+    private Button biniciar;
+    private Button bparar;
+
+
+    private boolean comenzar = false;
     private Polyline polilinea;
     private List<LatLng> list = new ArrayList<>();
     Location location = null;
     LatLng latLong = null;
-
-
-
-    private OnFragmentInteractionListener mListener;
+    private boolean needsInit=false;
 
     public MapFragment() {
         // Required empty public constructor
@@ -96,6 +93,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                              Bundle savedInstanceState) {
 
 
+
+
+
+
+
         View v = inflater.inflate(R.layout.fragment_map, container, false);
 
         // Gets the MapView from the XML layout and creates it
@@ -105,7 +107,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         // Gets to GoogleMap from the MapView and does initialization stuff
         map = mapView.getMap();
         map.getUiSettings().setMyLocationButtonEnabled(false);
+        if (savedInstanceState == null) {
+            needsInit=true;
+        }
 
+        mapView.getMapAsync(this);
 
         // Needs to call MapsInitializer before doing any CameraUpdateFactory calls
         MapsInitializer.initialize(this.getActivity());
@@ -113,68 +119,86 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         // Updates the location and zoom of the MapView
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(40.416646, -3.703818), 6);
         map.animateCamera(cameraUpdate);
+
         bmapa = (Button) v.findViewById(R.id.bmapa);
         bhibrido = (Button) v.findViewById(R.id.bhibrido);
         bterreno = (Button) v.findViewById(R.id.bterreno);
+        biniciar = (Button) v.findViewById(R.id.biniciar);
+        bparar = (Button) v.findViewById(R.id.bparar);
+
+
         bmapa.setOnClickListener(this);
         bhibrido.setOnClickListener(this);
         bterreno.setOnClickListener(this);
+        biniciar.setOnClickListener(this);
+        bparar.setOnClickListener(this);
 
         onMapReady(map);
+
+
         return v;
     }
 
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
+    public void onMapLongClick(LatLng latLng) {
+        String cad = String.valueOf((latLng.latitude));
+        cad = cad.substring(0, 9);
+        String cad2 = String.valueOf((latLng.longitude));
+        cad2 = cad2.substring(0, 8);
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
+        this.map.addMarker(new MarkerOptions().position(latLng)
+                .title("Coordenadas:")
+                .snippet("Latitud: " + String.valueOf(cad)
+                        + "\nLongitud: " + String.valueOf(cad2)));
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
+
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        map = googleMap;
+
+        //mMap = googleMap;
         if (ActivityCompat.checkSelfPermission(mapView.getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mapView.getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         map.setMyLocationEnabled(true);
+
+        if (needsInit) {
+            //Centramos la imagen del mapa al arrancar
+            CameraUpdate center=
+                    CameraUpdateFactory.newLatLng(new LatLng(40.416646,
+                            -3.703818));
+            CameraUpdate zoom=CameraUpdateFactory.zoomTo(4);
+
+            map.moveCamera(center);
+            map.animateCamera(zoom);
+
+
+        }
+
+
+
+        map.setOnInfoWindowClickListener(this);
+
+
+        //Recoge las coordenadas cada 5 segundos
+        map.setOnMyLocationChangeListener(this);
+
+
 
     }
 
     private void buildAlertMessageNoGps() {
     }
 
-    @Override
-    public void onMyLocationChange(Location location) {
-        // Este metodo se ejecuta cada vez que el GPS recibe nuevas coordenadas
-        // debido a la deteccion de un cambio de ubicacion
-        latLong = new LatLng(location.getLatitude(),
-                location.getLongitude());
-
-        //Recogemos las coordenadas en un arrayList
-        list.add(latLong);
-
-        ruta();
-    }
 
     @Override
     public void onInfoWindowClick(Marker marker) {
@@ -183,6 +207,19 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     public void onResume() {
         super.onResume();
         mapView.onResume();
+    }
+    @Override
+    public void onMyLocationChange(Location lastKnownLocation) {
+        
+
+if (comenzar==true) {
+    LatLng latLong = new LatLng(lastKnownLocation.getLatitude(),
+            lastKnownLocation.getLongitude());
+    //Recogemos las coordenadas en un arrayList
+    list.add(latLong);
+
+    ruta();
+}
     }
 
     @Override
@@ -206,6 +243,38 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
                 break;
 
+            case R.id.biniciar:
+              comenzar = true;
+
+                location = map.getMyLocation();
+                onMyLocationChange(location);
+                latLong = new LatLng(map.getMyLocation().getLatitude(),
+                        map.getMyLocation().getLongitude());
+                onMapLongClick(latLong);
+
+                this.map.addMarker(new MarkerOptions().position(latLong)
+                        .title("Coordenadas:")
+                        .snippet("Latitud: " + String.valueOf(map.getMyLocation().getLatitude())
+                                + "\n Longitud: " + String.valueOf(map.getMyLocation().getLongitude())));
+                list.add(latLong);
+
+                ruta();
+                break;
+
+            case R.id.bparar:
+                latLong = new LatLng(map.getMyLocation().getLatitude(),
+                        map.getMyLocation().getLongitude());
+                onMapLongClick(latLong);
+
+                    this.map.addMarker(new MarkerOptions().position(latLong)
+                            .title("Coordenadas:")
+                            .snippet("Latitud: " + String.valueOf(map.getMyLocation().getLatitude())
+                                    + "\n Longitud: " + String.valueOf(map.getMyLocation().getLongitude())));
+                    list.add(latLong);
+
+                comenzar = false;
+                break;
+
 
             default:
                 break;
@@ -214,17 +283,18 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
     }
 
+
+
+
     @Override
     public boolean onMyLocationButtonClick() {
         return false;
     }
 
 
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
-        public void ruta () {
+
+
+    public void ruta () {
 
             PolylineOptions po;
 
@@ -243,5 +313,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
             }
 
         }
-   
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
+    }
 }
