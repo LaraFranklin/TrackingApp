@@ -57,6 +57,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private Button bterreno;
     private Button biniciar;
     private Button bparar;
+    TextView textvel;
+
 
 
     private boolean comenzar = false;
@@ -125,6 +127,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         bterreno = (Button) v.findViewById(R.id.bterreno);
         biniciar = (Button) v.findViewById(R.id.biniciar);
         bparar = (Button) v.findViewById(R.id.bparar);
+        textvel= (TextView) v.findViewById(R.id.textvel);
 
 
         bmapa.setOnClickListener(this);
@@ -210,9 +213,18 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     }
     @Override
     public void onMyLocationChange(Location lastKnownLocation) {
-        
+
+
+
+
 
 if (comenzar==true) {
+    if (map.getMyLocation()==null){
+        textvel.setText("-.- m/s");
+    }else{
+        float num = lastKnownLocation.getSpeed();
+        textvel.setText(num + "m/s");
+    }
     LatLng latLong = new LatLng(lastKnownLocation.getLatitude(),
             lastKnownLocation.getLongitude());
     //Recogemos las coordenadas en un arrayList
