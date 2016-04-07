@@ -11,47 +11,18 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.rawals.mymapa.MapsActivity" />
+        tools:context="com.rawals.mymapa.MapsActivity"
+        android:layout_above="@+id/biniciar" />
 
-        <Button
+    <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Mapa"
-            android:id="@+id/bmapa"
-            android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@+id/bhibrido"
-            android:layout_toStartOf="@+id/bhibrido" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Hibrido"
-            android:id="@+id/bhibrido"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Terreno"
-            android:id="@+id/bterreno"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/bhibrido"
-            android:layout_toEndOf="@+id/bhibrido" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
 
             android:text="Iniciar"
             android:id="@+id/biniciar"
-            android:layout_alignTop="@+id/bparar"
-            android:layout_alignParentStart="false" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,9 +62,9 @@
         android:id="@+id/textView2"
         android:textSize="10dp"
         android:layout_alignTop="@+id/bparar"
-        android:layout_toRightOf="@+id/bhibrido"
         android:layout_toStartOf="@+id/bparar"
-        android:layout_toLeftOf="@+id/bparar" />
+        android:layout_toLeftOf="@+id/bparar"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -131,6 +102,16 @@
         android:layout_toRightOf="@+id/biniciar"
         android:layout_alignRight="@+id/textView"
         android:layout_alignEnd="@+id/textView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btipomapa"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/maptype"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
 
 
 </RelativeLayout>

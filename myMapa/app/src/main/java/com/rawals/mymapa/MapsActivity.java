@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -39,7 +40,8 @@ import java.util.List;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener, GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMyLocationChangeListener {
 
     private GoogleMap map;
-    Button bmapa;
+    //Button bmapa;
+    ImageButton btipomapa;
     Button bhibrido;
     Button bterreno;
     Button biniciar;
@@ -76,9 +78,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        bmapa = (Button) findViewById(R.id.bmapa);
-        bhibrido = (Button) findViewById(R.id.bhibrido);
-        bterreno = (Button) findViewById(R.id.bterreno);
+        btipomapa = (ImageButton) findViewById(R.id.btipomapa);
+       // bhibrido = (Button) findViewById(R.id.bhibrido);
+        //bterreno = (Button) findViewById(R.id.bterreno);
         biniciar = (Button) findViewById(R.id.biniciar);
         bparar = (Button) findViewById(R.id.bparar);
         textvel= (TextView) findViewById(R.id.textvel);
@@ -88,9 +90,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         cronometro.setVisibility(View.INVISIBLE);
 
 
-        bmapa.setOnClickListener(this);
-        bhibrido.setOnClickListener(this);
-        bterreno.setOnClickListener(this);
+        btipomapa.setOnClickListener(this);
+       // bhibrido.setOnClickListener(this);
+        //bterreno.setOnClickListener(this);
         biniciar.setOnClickListener(this);
         bparar.setOnClickListener(this);
 
@@ -164,22 +166,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         switch (v.getId()) {
 
-            case R.id.bmapa:
-                map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+            case R.id.btipomapa:
 
+                if (map.getMapType() == GoogleMap.MAP_TYPE_NORMAL) {
+
+                    map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+
+                } else if (map.getMapType() == GoogleMap.MAP_TYPE_SATELLITE) {
+
+                    map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+
+                } else if (map.getMapType() == GoogleMap.MAP_TYPE_HYBRID){
+
+                    map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+                }
 
                 break;
-            case R.id.bhibrido:
-                map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
-
-                break;
-
-            case R.id.bterreno:
-                map.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-
-
-                break;
             case R.id.biniciar:
                 cronometro.setVisibility(View.VISIBLE);
 
