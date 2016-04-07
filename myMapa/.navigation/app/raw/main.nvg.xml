@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.rawals.mymapa.ResumenCarrera"/>
+      <point      
+        x = "688"      
+        y = "56"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.rawals.mymapa.TiposActivity"/>
+      <point      
+        x = "2008"      
+        y = "1728"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.rawals.mymapa.MainActivity"/>
+      <point      
+        x = "1624"      
+        y = "60"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.rawals.mymapa.ListarCarreras"/>
+      <point      
+        x = "3252"      
+        y = "1664"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.rawals.mymapa.MapsActivity"/>
+      <point      
+        x = "692"      
+        y = "1796"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.rawals.mymapa.Main2Activity"/>
+      <point      
+        x = "116"      
+        y = "1596"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>
