@@ -24,6 +24,14 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_disabled.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_pressed.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_light_disabled.9.png"
+    },
+    {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/bubble_mask.9.png",
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/res/drawable-xhdpi/bubble_mask.9.png"
     },
@@ -40,6 +48,10 @@
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_dark_pressed.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_pressed.9.png"
     },
@@ -48,12 +60,24 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_light_normal.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_disabled.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_light_normal.9.png"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_focused.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_light_focused.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_light_normal.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal.9.png",
@@ -116,6 +140,10 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_light_disabled.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_light_disabled.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_light_disabled.9.png"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_focused.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_dark_focused.9.png"
     },
@@ -136,6 +164,10 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_normal.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_focused.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_dark_focused.9.png"
+    },
+    {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_focused.9.png",
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_dark_focused.9.png"
     },
@@ -146,6 +178,14 @@
     {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal.9.png",
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_light_focused.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_light_normal.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_light_normal.9.png"
     },
     {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_light_pressed.9.png",
@@ -170,6 +210,10 @@
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_full_open_on_phone.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_pressed.9.png"
     },
     {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
@@ -200,16 +244,36 @@
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_dark_normal.9.png"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_pressed.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_light_pressed.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_light_normal.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_light_normal.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_light_focused.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_light_focused.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
@@ -218,6 +282,14 @@
     {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_focused.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_light_focused.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_disabled.9.png",
@@ -234,6 +306,10 @@
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_dark_disabled.9.png"
     },
     {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_dark_disabled.9.png",
@@ -258,6 +334,10 @@
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/bubble_shadow.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/res/drawable-xhdpi/bubble_shadow.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_light_focused.9.png",
@@ -324,6 +404,14 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_light_disabled.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_light_pressed.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_normal.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_light_normal.9.png"
     },
@@ -334,6 +422,10 @@
     {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_focused.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_light_focused.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
@@ -360,12 +452,24 @@
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_light_normal.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_dark_focused.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_dark_normal.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_dark_normal.9.png"
+    },
+    {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png",
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_dark_disabled.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_light_pressed.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_light_focused.9.png",
@@ -380,8 +484,28 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_light_pressed.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_normal.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_dark_normal.9.png"
+    },
+    {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_icon_dark_focused.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/bubble_mask.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/res/drawable-xhdpi/bubble_mask.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/bubble_mask.9.png",
@@ -392,12 +516,24 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_focused.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_normal.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_light_normal.9.png"
+    },
+    {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_light_focused.9.png",
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_light_focused.9.png"
     },
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_dark_disabled.9.png"
+    },
+    {
         "merged": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_dark_focused.9.png",
         "source": "/Users/8fprogmm04/Desktop/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_light_pressed.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
@@ -414,6 +550,10 @@
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_text_light_disabled.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/android-maps-utils/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_light_pressed.9.png",

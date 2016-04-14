@@ -80,6 +80,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+
+
         btipomapa = (ImageButton) findViewById(R.id.btipomapa);
 
         biniciar = (Button) findViewById(R.id.biniciar);
@@ -92,6 +94,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         biniciar.setOnClickListener(this);
         bparar.setOnClickListener(this);
+        btipomapa.setOnClickListener(this);
 
         tipo= getIntent().getStringExtra("tipo");
 
@@ -187,6 +190,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
 
                 break;
+
             case R.id.biniciar:
 
                 biniciar.setEnabled(false);
