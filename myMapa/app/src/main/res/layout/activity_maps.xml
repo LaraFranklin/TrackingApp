@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context="com.rawals.mymapa.MapsActivity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:textColor="@android:color/white"
+        android:shadowColor="@android:color/holo_blue_light"
+        android:text="INICIAR"
+        android:id="@+id/biniciar"
+        android:layout_alignBottom="@+id/map"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textdis"
+        android:layout_toStartOf="@+id/textdis" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        android:shadowColor="@android:color/holo_blue_light"
+        android:text="FINALIZAR"
+        android:id="@+id/bparar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textdis"
+        android:layout_toEndOf="@+id/textdis" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="DURACIÓN"
+        android:id="@+id/textview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="50px"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="DISTANCIA"
+        android:id="@+id/textview3"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="VELOCIDAD"
+        android:id="@+id/textview2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="50px"
+        android:textSize="15dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btipomapa"
+        android:src="@drawable/maptype"
+        android:layout_alignTop="@+id/bparar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textdis"
+        android:textSize="15dp"
+        android:layout_below="@+id/textview3"
+        android:layout_alignRight="@+id/textview3"
+        android:layout_alignEnd="@+id/textview3"
+        android:layout_alignBottom="@+id/textvel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textvel"
+        android:textSize="15dp"
+        android:layout_below="@+id/textview2"
+        android:layout_alignLeft="@+id/textview2"
+        android:layout_alignStart="@+id/textview2"
+        android:layout_alignRight="@+id/bparar"
+        android:layout_alignEnd="@+id/bparar" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cronometro"
+        android:textSize="15dp"
+        android:layout_below="@+id/textview"
+        android:layout_alignRight="@+id/textview"
+        android:layout_alignEnd="@+id/textview"
+        android:layout_marginRight="27dp"
+        android:layout_marginEnd="27dp" />
+
+
+</RelativeLayout>
