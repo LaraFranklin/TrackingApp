@@ -2,8 +2,9 @@ package com.rawals.mymapa;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,10 +34,6 @@ public class ResumenCarrera extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumen_carrera);
 
-
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
         bguardar = (Button) findViewById(R.id.bguardar);
         bcancelar = (Button) findViewById(R.id.bcancelar);
 
@@ -87,5 +84,26 @@ public class ResumenCarrera extends AppCompatActivity implements View.OnClickLis
             default:
                 break;
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //Menu de los 3 puntitos
+        getMenuInflater().inflate(R.menu.main, menu);
+
+        return (super.onCreateOptionsMenu(menu));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        //Menu de las opciones de los 3 puntitos
+        if (item.getItemId() == R.id.legal) {
+            startActivity(new Intent(this, LegalNoticesActivity.class));
+
+            return(true);
+        }
+
+        return(super.onOptionsItemSelected(item));
     }
 }

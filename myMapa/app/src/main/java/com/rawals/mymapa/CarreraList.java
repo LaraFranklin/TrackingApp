@@ -4,9 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -35,8 +36,6 @@ public class CarreraList extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_carreras);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
 
         gestorbd = new GestorBD(this);
         gestorbd.abrirBD();
@@ -117,6 +116,26 @@ public class CarreraList extends ActionBarActivity {
             return vi;
         }
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //Menu de los 3 puntitos
+        getMenuInflater().inflate(R.menu.main, menu);
 
+        return (super.onCreateOptionsMenu(menu));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        //Menu de las opciones de los 3 puntitos
+        if (item.getItemId() == R.id.legal) {
+            startActivity(new Intent(this, LegalNoticesActivity.class));
+
+            return(true);
+        }
+
+        return(super.onOptionsItemSelected(item));
+    }
 
 }

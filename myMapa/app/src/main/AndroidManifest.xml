@@ -21,34 +21,46 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="Trakinkgdaw">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Menu Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MapsActivity" />
+
         <activity
             android:name=".ResumenCarrera"
+            android:label="Resumen de la carrera"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
         <activity
             android:name=".CarreraList"
+            android:label="Lista de carreras"
             android:parentActivityName=".ResumenCarrera">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
         <activity android:name=".DetallesCarrera"
+            android:label="Detalles de la carrera"
             android:parentActivityName=".CarreraList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".CarreraList" />
         </activity>
+
+        <activity
+            android:name=".LegalNoticesActivity"
+            android:label="@string/legal"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
