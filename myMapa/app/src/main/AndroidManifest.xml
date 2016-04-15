@@ -14,6 +14,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Trakinkgdaw"
         android:supportsRtl="true"
+
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -22,6 +23,7 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
             android:label="Menu Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,11 +31,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MapsActivity" />
+        <activity android:name=".MapsActivity"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".ResumenCarrera"
             android:label="Resumen de la carrera"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -43,6 +47,7 @@
         <activity
             android:name=".CarreraList"
             android:label="Lista de carreras"
+            android:screenOrientation="portrait"
             android:parentActivityName=".ResumenCarrera">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -51,6 +56,7 @@
 
         <activity android:name=".DetallesCarrera"
             android:label="Detalles de la carrera"
+            android:screenOrientation="portrait"
             android:parentActivityName=".CarreraList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -60,6 +66,7 @@
         <activity
             android:name=".LegalNoticesActivity"
             android:label="@string/legal"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
