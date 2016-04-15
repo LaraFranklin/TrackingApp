@@ -93,8 +93,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/btipomapa"
         android:src="@drawable/maptype"
-        android:layout_below="@+id/textdis"
-        android:layout_centerHorizontal="true" />
+        android:background="@android:color/holo_blue_light"
+        android:shadowColor="@android:color/holo_blue_light"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/biniciar"
+        android:layout_alignRight="@+id/textview3"
+        android:layout_alignEnd="@+id/textview3"
+        android:layout_below="@+id/textdis" />
 
     <TextView
         android:layout_width="wrap_content"

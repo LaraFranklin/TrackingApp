@@ -100,6 +100,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         bparar.setOnClickListener(this);
         btipomapa.setOnClickListener(this);
 
+        bparar.setEnabled(false);
+
         tipo= getIntent().getStringExtra("tipo");
 
 

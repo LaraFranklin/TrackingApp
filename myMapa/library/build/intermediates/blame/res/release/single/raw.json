@@ -1,7 +1,79 @@
 [
     {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/basic_placemark.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/basic_placemark.kml"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/draw_order_ground_overlay.kml",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/draw_order_ground_overlay.kml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/ground_overlay.kml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/ground_overlay.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/nested_folders.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/nested_folders.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/unknwown_folder.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/unknwown_folder.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/nested_multigeometry.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/nested_multigeometry.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/ground_overlay_color.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/ground_overlay_color.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/basic_folder.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/basic_folder.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/poly_style_boolean_numeric.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/poly_style_boolean_numeric.kml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/visibility_ground_overlay.kml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/visibility_ground_overlay.kml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/basic_folder.kml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/basic_folder.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/unsupported.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/unsupported.kml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/default_balloon.kml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/default_balloon.kml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/unsupported.kml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/unsupported.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/multiple_placemarks.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/multiple_placemarks.kml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/nested_multigeometry.kml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/nested_multigeometry.kml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/ground_overlay_color.kml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/ground_overlay_color.kml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/poly_style_boolean_numeric.kml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/poly_style_boolean_numeric.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/multigeometry_placemarks.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/multigeometry_placemarks.kml"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/extended_data.kml",
@@ -12,6 +84,10 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/multiple_placemarks.kml"
     },
     {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/visibility_ground_overlay.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/visibility_ground_overlay.kml"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/unknwown_folder.kml",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/unknwown_folder.kml"
     },
@@ -20,16 +96,20 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/poly_style_boolean_alpha.kml"
     },
     {
-        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/ground_overlay.kml",
-        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/ground_overlay.kml"
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/document_nest.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/document_nest.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/inline_style.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/inline_style.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/extended_data.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/extended_data.kml"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/basic_placemark.kml",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/basic_placemark.kml"
-    },
-    {
-        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/visibility_ground_overlay.kml",
-        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/visibility_ground_overlay.kml"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/inline_style.kml",
@@ -44,36 +124,36 @@
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/cdata.kml"
     },
     {
-        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/basic_folder.kml",
-        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/basic_folder.kml"
-    },
-    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/document_nest.kml",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/document_nest.kml"
     },
     {
-        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/default_balloon.kml",
-        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/default_balloon.kml"
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/poly_style_boolean_alpha.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/poly_style_boolean_alpha.kml"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/nested_folders.kml",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/nested_folders.kml"
     },
     {
-        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/unsupported.kml",
-        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/unsupported.kml"
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/ground_overlay.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/ground_overlay.kml"
     },
     {
-        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/nested_multigeometry.kml",
-        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/nested_multigeometry.kml"
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/ballon_gx_prefix.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/ballon_gx_prefix.kml"
     },
     {
-        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/ground_overlay_color.kml",
-        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/ground_overlay_color.kml"
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/cdata.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/cdata.kml"
     },
     {
-        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/poly_style_boolean_numeric.kml",
-        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/raw/poly_style_boolean_numeric.kml"
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/draw_order_ground_overlay.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/draw_order_ground_overlay.kml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/default_balloon.kml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/res/raw/default_balloon.kml"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/raw/multigeometry_placemarks.kml",
