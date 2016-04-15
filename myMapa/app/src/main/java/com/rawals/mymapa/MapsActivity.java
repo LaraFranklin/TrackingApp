@@ -188,14 +188,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (map.getMapType() == GoogleMap.MAP_TYPE_NORMAL) {
 
                     map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                    Toast.makeText(MapsActivity.this, "MAPA SATELITE", Toast.LENGTH_LONG).show();
+
 
                 } else if (map.getMapType() == GoogleMap.MAP_TYPE_SATELLITE) {
 
                     map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                    Toast.makeText(MapsActivity.this, "MAPA HIBRIDO", Toast.LENGTH_LONG).show();
 
                 } else if (map.getMapType() == GoogleMap.MAP_TYPE_HYBRID){
 
                     map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                    Toast.makeText(MapsActivity.this, "MAPA NORMAL", Toast.LENGTH_LONG).show();
 
                 }
 

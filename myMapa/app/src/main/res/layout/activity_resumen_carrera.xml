@@ -34,9 +34,8 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="392dp"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.70"
             android:weightSum="1">
 
             <LinearLayout
@@ -149,37 +148,21 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:id="@+id/editText"
-                android:layout_gravity="center_horizontal" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="49dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.19">
-
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="68dp"
                 android:text="GUARDAR CARRERA"
                 android:id="@+id/bguardar"
-                android:layout_weight="1"
                 android:layout_gravity="right" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="74dp"
                 android:text="CANCELAR CARRERA"
                 android:id="@+id/bcancelar"
                 android:layout_gravity="left" />
