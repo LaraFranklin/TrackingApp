@@ -74,7 +74,8 @@ public class DetallesCarrera extends AppCompatActivity implements OnMapReadyCall
     @Override
     public void onMapReady(GoogleMap googleMap) {
         List<LatLng> decodedPath = PolyUtil.decode(c.getPolilinea());
-        LatLng zoom = decodedPath.get(0);
+        int total = decodedPath.size();
+        LatLng zoom = decodedPath.get(total/2);
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(zoom.latitude,zoom.longitude),13));
 

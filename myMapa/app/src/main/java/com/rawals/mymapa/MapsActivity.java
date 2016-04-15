@@ -2,23 +2,27 @@ package com.rawals.mymapa;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -37,7 +41,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener, GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMyLocationChangeListener {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener, GoogleMap.OnInfoWindowClickListener {
     private PolyUtil polyUtil;
     private GoogleMap map;
     ImageButton btipomapa;
@@ -46,6 +50,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     TextView textvel;
     TextView textdis;
     String tipo = "";
+    Marker marker;
+
+    Double distancia;
 
      Chronometer cronometro;
      String time = "";
@@ -104,64 +111,70 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-
-
-
         map = googleMap;
 
-        //mMap = googleMap;
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
         map.setMyLocationEnabled(true);
 
-        if (needsInit) {
-            //Centramos la imagen del mapa al arrancar
-            CameraUpdate center =
-                    CameraUpdateFactory.newLatLng(new LatLng(40.416646,
-                            -3.703818));
-            CameraUpdate zoom = CameraUpdateFactory.zoomTo(4);
-
-            map.moveCamera(center);
-            map.animateCamera(zoom);
-
-
-        }
-
-
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 10));
         map.setOnInfoWindowClickListener(this);
-        //Recoge las coordenadas cada 5 segundos
-        map.setOnMyLocationChangeListener(this);
-
     }
 
-    @Override
-    public void onMyLocationChange(Location location) {
-        // Este metodo se ejecuta cada vez que el GPS recibe nuevas coordenadas
-        // debido a la deteccion de un cambio de ubicacion
-        if (comenzar == true) {
-            if (map.getMyLocation() == null) {
-                textvel.setText("-.- km/h");
-            } else {
+    public void iniciar_ruta() {
+        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+        // Define a listener that responds to location updates
+        LocationListener locationListener = new LocationListener() {
+            public void onLocationChanged(Location location) {
+                if (comenzar == true) {
+                    if (map.getMyLocation() == null) {
+                        textvel.setText("-.- km/h");
+                    } else {
+                        float num = location.getSpeed();
+                        textvel.setText(num * 3.6 + "\n km/h");
+                    }
+
+                    LatLng latLong = new LatLng(location.getLatitude(),
+                            location.getLongitude());
+                    //Recogemos las coordenadas en un arrayList
+                    list.add(latLong);
+                    listString.add(String.valueOf(latLong));
+                    distancia = dame_Distancia();
+                    ruta();
+
+                }
+
+
+                textdis.setText(Double.toString(distancia) + "\n km");
                 float num = location.getSpeed();
-                textvel.setText(num * 3.6 + "\n km/h");
+                textvel.setText(num * 3.6 + "\n km/h");   // \n
+
+                if (marker != null) {
+                    marker.remove();
+                }
+
             }
 
-    LatLng latLong = new LatLng(location.getLatitude(),
-            location.getLongitude());
-    //Recogemos las coordenadas en un arrayList
-    list.add(latLong);
-    listString.add(String.valueOf(latLong));
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+                //Toast.makeText(Mapa.this, ">>>>> onStatusChanged ", Toast.LENGTH_LONG).show();
+            }
 
-    ruta();
+            public void onProviderEnabled(String provider) {
+                Toast.makeText(MapsActivity.this, "GPS activado", Toast.LENGTH_LONG).show();
+            }
 
+            public void onProviderDisabled(String provider) {
+                Toast.makeText(MapsActivity.this, "Activar el GPS", Toast.LENGTH_LONG).show();
+            }
+        };
+        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
+
+        if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+            //locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000, 0, locationListener);
         }
     }
 
@@ -190,7 +203,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 break;
 
             case R.id.biniciar:
-
+            iniciar_ruta();
                 biniciar.setEnabled(false);
                 bparar.setEnabled(true);
 
@@ -205,7 +218,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     comenzar = true;
 
                     location = map.getMyLocation();
-                    onMyLocationChange(location);
+
                     latLong = new LatLng(map.getMyLocation().getLatitude(),
                             map.getMyLocation().getLongitude());
                     String cad = String.valueOf((latLong.latitude));
@@ -275,6 +288,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+
+
+
     @Override
     public void onInfoWindowClick(Marker marker) {
 
@@ -299,6 +315,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    public double dame_Distancia () {
+        double distance=0;
+        for (int i = 0, tam = list.size(); i < tam; i++){
+            if (i < tam -1) {
+                distance += calcular_Distancia(list.get(i), list.get(i + 1));
+            }
+        }
+        return distance;
+    }
 
+    public static double calcular_Distancia(LatLng StartP,LatLng EndP){
+        // fórmula de Haversine
+        int Radius = 6371000; //Radio de la tierra
+        double lat1 = StartP.latitude;
+        double lat2 = EndP.latitude;
+        double lon1 = StartP.longitude;
+        double lon2 = EndP.longitude;
+        double dLat = Math.toRadians(lat2-lat1);
+        double dLon = Math.toRadians(lon2-lon1);
+        double a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2)) * Math.sin(dLon/2) * Math.sin(dLon/2);
+        double c = 2 * Math.asin(Math.sqrt(a));
+        double d = (Radius * c); // en Km
+        return (double) (Math.round(d*1)/1); // Redondeo a un decimal
+    }
 
 }
