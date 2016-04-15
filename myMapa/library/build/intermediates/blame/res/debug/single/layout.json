@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/layout/webview.xml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/layout/webview.xml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/layout/info_window.xml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/layout/info_window.xml"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/layout/text_bubble.xml",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/layout/text_bubble.xml"
+    }
+]

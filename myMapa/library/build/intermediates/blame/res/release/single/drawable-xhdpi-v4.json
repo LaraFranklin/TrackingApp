@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_focused.9.png",
-        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_light_focused.9.png"
-    },
-    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/bubble_mask.9.png",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/res/drawable-xhdpi/bubble_mask.9.png"
+    },
+    {
+        "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_google_signin_btn_text_light_focused.9.png",
+        "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_google_signin_btn_text_light_focused.9.png"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/release/drawable-xhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
