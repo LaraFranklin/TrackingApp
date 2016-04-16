@@ -109,7 +109,8 @@
         android:id="@+id/textdis"
         android:textSize="20dp"
         android:layout_alignTop="@+id/cronometro"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -122,18 +123,20 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/textview2"
-        android:layout_alignStart="@+id/textview2" />
+        android:layout_alignStart="@+id/textview2"
+        android:textColor="#000000" />
 
     <Chronometer
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cronometro"
         android:textSize="20dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginStart="38dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
         android:layout_above="@+id/biniciar"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:paddingLeft="15px" />
 
 
 </RelativeLayout>

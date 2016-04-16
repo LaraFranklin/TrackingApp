@@ -93,8 +93,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         textvel= (TextView) findViewById(R.id.textvel);
         textdis= (TextView) findViewById(R.id.textdis);
 
+        textdis.setText("0,00 km");
+        textvel.setText("0,00 km/h");
+
         cronometro = (Chronometer) findViewById(R.id.cronometro);
-        cronometro.setVisibility(View.INVISIBLE);
+        cronometro.setVisibility(View.VISIBLE);
 
         biniciar.setOnClickListener(this);
         bparar.setOnClickListener(this);
@@ -132,10 +135,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onLocationChanged(Location location) {
                 if (comenzar == true) {
                     if (map.getMyLocation() == null) {
-                        textvel.setText("-.- km/h");
+                        textvel.setText("-,- km/h");
                     } else {
                         float num = location.getSpeed();
-                        textvel.setText(num * 3.6 + "\n km/h");
+                        textvel.setText(String.format("%,2f", num) + " km/h");
+
                     }
 
                     LatLng latLong = new LatLng(location.getLatitude(),
@@ -208,19 +212,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 break;
 
             case R.id.biniciar:
-            iniciar_ruta();
-                biniciar.setEnabled(false);
-                bparar.setEnabled(true);
 
-                cronometro.setVisibility(View.VISIBLE);
-
-                date = (DateFormat.format("dd-MM-yyyy HH:mm:ss", new java.util.Date()).toString());
-                    //Iniciar el cronómetro
-                    cronometro.setBase(SystemClock.elapsedRealtime());
-                    cronometro.start();
-
-
-                    comenzar = true;
+                try {
 
                     location = map.getMyLocation();
 
@@ -230,9 +223,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     cad = cad.substring(0, 9);
                     String cad2 = String.valueOf((latLong.longitude));
                     cad2 = cad2.substring(0, 8);
-                String[] latLng = "-34.8799074,174.7565664".split(",");
-                double latitude = Double.parseDouble(latLng[0]);
-                double longitude = Double.parseDouble(latLng[1]);
+                    String[] latLng = "-34.8799074,174.7565664".split(",");
+                    double latitude = Double.parseDouble(latLng[0]);
+                    double longitude = Double.parseDouble(latLng[1]);
 
                     this.map.addMarker(new MarkerOptions().position(latLong)
                             .title("INICIO:")
@@ -243,6 +236,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     listString.add(String.valueOf(latLong));
 
                     ruta();
+
+                    iniciar_ruta();
+                    biniciar.setEnabled(false);
+                    bparar.setEnabled(true);
+
+                    //cronometro.setVisibility(View.VISIBLE);
+
+                    date = (DateFormat.format("dd-MM-yyyy HH:mm:ss", new java.util.Date()).toString());
+                    //Iniciar el cronómetro
+                    cronometro.setBase(SystemClock.elapsedRealtime());
+                    cronometro.start();
+
+
+                    comenzar = true;
+
+
+
+                } catch (java.lang.IllegalStateException noloc){
+
+                    Toast.makeText(MapsActivity.this, "Localización no disponible", Toast.LENGTH_LONG).show();
+                }
+
+
 
                 break;
 
@@ -255,7 +271,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .setMessage("¿Seguro que quieres terminar la actividad?")
                     .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface arg0, int arg1) {
-                            cronometro.setVisibility(View.INVISIBLE);
+                            //cronometro.setVisibility(View.INVISIBLE);
                             cronometro.stop();
                             long minutos = ((SystemClock.elapsedRealtime()-cronometro.getBase())/1000)/60;
                             long segundos = ((SystemClock.elapsedRealtime()-cronometro.getBase())/1000)%60;
