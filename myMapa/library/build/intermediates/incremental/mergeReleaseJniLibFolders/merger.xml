@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/src/release/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/src/release/jniLibs"/></dataSet></merger>

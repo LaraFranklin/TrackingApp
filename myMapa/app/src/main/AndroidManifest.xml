@@ -12,7 +12,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Trakinkgdaw"
+        android:label="ITracking"
         android:supportsRtl="true"
 
         android:theme="@style/AppTheme">
@@ -24,7 +24,7 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
-            android:label="Menu Principal">
+            android:label="iTracking">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -48,7 +48,7 @@
             android:name=".CarreraList"
             android:label="Lista de carreras"
             android:screenOrientation="portrait"
-            android:parentActivityName=".ResumenCarrera">
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />

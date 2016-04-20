@@ -44,6 +44,7 @@ public class GestorBD extends AppCompatActivity {
             values.put("distancia", (String) c.getDistancia());
             values.put("duracion", (String) c.getDuracion());
             values.put("polilinea", (String) c.getPolilinea());
+            values.put("tipo", (String) c.getTipo());
 
 
 
@@ -66,7 +67,7 @@ public class GestorBD extends AppCompatActivity {
         if (bd.isOpen()) {
 
             String tabla = "carreras";
-            String[] columnas = new String[]{"id", "fecha", "distancia", "duracion","polilinea"};
+            String[] columnas = new String[]{"id", "fecha", "distancia", "duracion","polilinea","tipo"};
             String where = "fecha = ?";
             String[] argumentoswhere = new String[]{nombre};
             String groupby = null;
@@ -83,6 +84,7 @@ public class GestorBD extends AppCompatActivity {
                 c.setDistancia(c1.getString(2));
                 c.setDuracion(c1.getString(3));
                 c.setPolilinea(c1.getString(4));
+                c.setTipo(c1.getString(5));
             }
         }
 
@@ -96,7 +98,7 @@ public class GestorBD extends AppCompatActivity {
         if (bd.isOpen()) {
 
             String tabla = "carreras";
-            String[] columnas = new String[]{"id", "fecha", "distancia", "duracion","polilinea"};
+            String[] columnas = new String[]{"id", "fecha", "distancia", "duracion","polilinea","tipo"};
             String where = null; // "id = ?"
             String[] argumentoswhere = null; // = new String[] {"35"};
             String groupby = null;
@@ -111,7 +113,7 @@ public class GestorBD extends AppCompatActivity {
 
                 // Recorremos el cursor hasta que no haya más registros
                 do {
-                    carrera c = new carrera(c1.getString(1), c1.getString(2), c1.getString(3), c1.getString(4));   // El campo 0 es el ID
+                    carrera c = new carrera(c1.getString(1), c1.getString(2), c1.getString(3), c1.getString(4),c1.getString(5));   // El campo 0 es el ID
                     l.add(c);
                 } while (c1.moveToNext());
             }
@@ -122,7 +124,7 @@ public class GestorBD extends AppCompatActivity {
 
     private class BDHelper extends SQLiteOpenHelper {
 
-        private String tablaCarreras = "CREATE TABLE carreras ( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, fecha TEXT, distancia TEXT, duracion TEXT, polilinea TEXT);";
+        private String tablaCarreras = "CREATE TABLE carreras ( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, fecha TEXT, distancia TEXT, duracion TEXT, polilinea TEXT,tipo TEXT);";
 
         public BDHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
             super(context, name, factory, version);

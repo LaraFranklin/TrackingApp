@@ -107,8 +107,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         tipo= getIntent().getStringExtra("tipo");
 
-
-
     }
 
 
@@ -217,8 +215,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     location = map.getMyLocation();
 
-                    latLong = new LatLng(map.getMyLocation().getLatitude(),
-                            map.getMyLocation().getLongitude());
+                    latLong = new LatLng(location.getLatitude(),location.getLongitude());
                     String cad = String.valueOf((latLong.latitude));
                     cad = cad.substring(0, 9);
                     String cad2 = String.valueOf((latLong.longitude));
@@ -257,6 +254,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     Toast.makeText(MapsActivity.this, "Localización no disponible", Toast.LENGTH_LONG).show();
                 }
+                catch (java.lang.NullPointerException noloc){
+
+                    Toast.makeText(MapsActivity.this, "Localización no disponible", Toast.LENGTH_LONG).show();
+                }
 
 
 
@@ -278,8 +279,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             time =(minutos +" : "+segundos);
                             cronometro.setText(time);
 
-                            latLong = new LatLng(map.getMyLocation().getLatitude(),
-                                    map.getMyLocation().getLongitude());
+                            latLong = new LatLng(location.getLatitude(),location.getLongitude());
 
                             list.add(latLong);
                             String polilinea = polyUtil.encode(list);

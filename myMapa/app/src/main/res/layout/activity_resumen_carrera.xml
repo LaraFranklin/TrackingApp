@@ -154,18 +154,28 @@
             android:layout_gravity="center_horizontal">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="68dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="GUARDAR CARRERA"
                 android:id="@+id/bguardar"
-                android:layout_gravity="right" />
+                android:layout_weight="1"
+
+                android:background="@android:color/holo_green_dark"
+                android:textColor="@android:color/white"
+                android:shadowColor="@android:color/holo_blue_light"
+                 />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="74dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="CANCELAR CARRERA"
+                android:layout_weight="1"
                 android:id="@+id/bcancelar"
-                android:layout_gravity="left" />
+                android:background="@android:color/holo_red_dark"
+                android:textColor="@android:color/white"
+                android:shadowColor="@android:color/holo_blue_light"
+
+                />
         </LinearLayout>
 
     </LinearLayout>

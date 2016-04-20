@@ -8,18 +8,28 @@ public class carrera {
     private CharSequence distancia;
     private CharSequence duracion;
     private String polilinea;
+    private String tipo;
 
     public carrera() {
 
 
     }
 
-    public carrera(CharSequence fecha, CharSequence distancia, CharSequence duracion,String polilinea) {
+    public carrera(CharSequence fecha, CharSequence distancia, CharSequence duracion,String polilinea, String tipo) {
         this.fecha = fecha;
         this.distancia = distancia;
         this.duracion = duracion;
         this.polilinea = polilinea;
+        this.tipo = tipo;
 
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public String getPolilinea() {

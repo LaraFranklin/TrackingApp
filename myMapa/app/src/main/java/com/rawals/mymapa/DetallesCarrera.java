@@ -27,7 +27,8 @@ public class DetallesCarrera extends AppCompatActivity implements OnMapReadyCall
     Button borrar;
     TextView fecha;
     TextView distancia;
-    TextView duracion;
+    TextView tiempo;
+    TextView tipo;
 
 
 
@@ -42,13 +43,14 @@ public class DetallesCarrera extends AppCompatActivity implements OnMapReadyCall
 
         fecha = (TextView) findViewById(R.id.fecha);
         distancia = (TextView) findViewById(R.id.distancia);
-        duracion = (TextView) findViewById(R.id.duracion);
-
+        tiempo = (TextView) findViewById(R.id.tiempo);
+        tipo = (TextView) findViewById(R.id.tipo);
         borrar = (Button) findViewById(R.id.b_borrar_carrera);
 
         fecha.setText(c.getFecha());
         distancia.setText(c.getDistancia());
-        duracion.setText(c.getDuracion());
+        tiempo.setText(c.getDuracion());
+        tipo.setText(c.getTipo());
 
         MapFragment mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
@@ -60,7 +62,7 @@ public class DetallesCarrera extends AppCompatActivity implements OnMapReadyCall
             @Override
             public void onClick(View v) {
                 gestorbd.abrirBD();
-                carrera c_elegido = new carrera(c.getFecha(), c.getDistancia(), c.getDuracion(),c.getPolilinea());
+                carrera c_elegido = new carrera(c.getFecha(), c.getDistancia(), c.getDuracion(),c.getPolilinea(),c.getTipo());
                 gestorbd.borrarCarrera(c_elegido);
                 gestorbd.cerrarBD();
                 Intent intent = new Intent(DetallesCarrera.this, CarreraList.class);

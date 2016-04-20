@@ -47,7 +47,7 @@ public class ResumenCarrera extends AppCompatActivity implements View.OnClickLis
         polilinea= getIntent().getStringExtra("polilinea");
 
         textfecha.setText(date);
-        textdis.setText(tipo);
+
         textdur.setText(duracion);
 
         bguardar.setOnClickListener(this);
@@ -68,7 +68,7 @@ public class ResumenCarrera extends AppCompatActivity implements View.OnClickLis
                 gestorbd.abrirBD();
 
                 // Guardamos el objeto
-                carrera c = new carrera(textfecha.getText(),textdis.getText(),textdur.getText(),polilinea);
+                carrera c = new carrera(textfecha.getText(),textdis.getText(),textdur.getText(),polilinea,tipo);
                 gestorbd.guardarCarrera(c);
                 gestorbd.cerrarBD();
 
