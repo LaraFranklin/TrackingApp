@@ -39,6 +39,8 @@ public class DetallesCarrera extends AppCompatActivity implements OnMapReadyCall
         setContentView(R.layout.activity_detalles_carrera);
 
         gestorbd = new GestorBD(this);
+
+        //Recogemos los valores del objeto guardado
         c = (carrera)com.getObjeto();
 
         fecha = (TextView) findViewById(R.id.fecha);
@@ -52,6 +54,7 @@ public class DetallesCarrera extends AppCompatActivity implements OnMapReadyCall
         tiempo.setText(c.getDuracion());
         tipo.setText(c.getTipo());
 
+        //Para que nos salga el mapa en el cuadrado
         MapFragment mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -75,10 +78,12 @@ public class DetallesCarrera extends AppCompatActivity implements OnMapReadyCall
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
+        //Recogemos los points y los decodificamos
         List<LatLng> decodedPath = PolyUtil.decode(c.getPolilinea());
         int total = decodedPath.size();
         LatLng zoom = decodedPath.get(total/2);
-
+    //Para centrar la camara en el medio de la polilinea
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(zoom.latitude,zoom.longitude),13));
 
 

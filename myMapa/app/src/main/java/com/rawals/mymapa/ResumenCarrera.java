@@ -27,6 +27,7 @@ public class ResumenCarrera extends AppCompatActivity implements View.OnClickLis
     String date = "";
     String tipo="";
     String duracion= "";
+    String distancia="";
     String polilinea="";
 
     @Override
@@ -36,18 +37,18 @@ public class ResumenCarrera extends AppCompatActivity implements View.OnClickLis
 
         bguardar = (Button) findViewById(R.id.bguardar);
         bcancelar = (Button) findViewById(R.id.bcancelar);
-
         textfecha = (TextView) findViewById(R.id.textfecha);
         textdis = (TextView) findViewById(R.id.textdisres);
         textdur = (TextView) findViewById(R.id.textdurres);
-
+        //Recogemos los valores
         date= getIntent().getStringExtra("date");
         tipo= getIntent().getStringExtra("tipo");
         duracion= getIntent().getStringExtra("duracion");
+        distancia= getIntent().getStringExtra("distancia");
         polilinea= getIntent().getStringExtra("polilinea");
 
         textfecha.setText(date);
-
+        textdis.setText(distancia);
         textdur.setText(duracion);
 
         bguardar.setOnClickListener(this);
@@ -71,7 +72,7 @@ public class ResumenCarrera extends AppCompatActivity implements View.OnClickLis
                 carrera c = new carrera(textfecha.getText(),textdis.getText(),textdur.getText(),polilinea,tipo);
                 gestorbd.guardarCarrera(c);
                 gestorbd.cerrarBD();
-
+                //Pasamos automaticamente al guardar a la lista de carreras
                 Intent intent = new Intent(this, CarreraList.class);
                 startActivity(intent);
 

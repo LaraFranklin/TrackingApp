@@ -34,10 +34,9 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:id="@+id/imagen_single_post_circuito"
-
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/imagen"
                         android:scaleType="centerCrop" />
                 </LinearLayout>
 

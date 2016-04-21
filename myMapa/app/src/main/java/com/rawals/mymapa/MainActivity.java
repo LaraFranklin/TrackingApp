@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b_bici.setOnClickListener(this);
         b_correr.setOnClickListener(this);
         b_andar.setOnClickListener(this);
+
         findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.b_bici:
                 tipo = "Bici";
+                //Mandamos tipo actividad  para guardar en la bd
                 Intent intent = new Intent(MainActivity.this,MapsActivity.class);
                 intent.putExtra("tipo",tipo);
                 startActivity(intent);
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.b_andar:
                 tipo = "Andar";
+                //Mandamos tipo actividad  para guardar en la bd
                 intent = new Intent(MainActivity.this,MapsActivity.class);
                 intent.putExtra("tipo",tipo);
                 startActivity(intent);
@@ -60,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.b_correr:
                 tipo = "Correr";
+                //Mandamos tipo actividad  para guardar en la bd
                 intent = new Intent(MainActivity.this,MapsActivity.class);
                 intent.putExtra("tipo",tipo);
                 startActivity(intent);

@@ -64,11 +64,4 @@ public class carrera {
         this.duracion = duracion;
     }
 
-
-    @Override
-    public String toString() {
-        return
-
-                "Fecha=" + fecha + "Distancia=" + distancia + "Duracion" + duracion;
-    }
 }

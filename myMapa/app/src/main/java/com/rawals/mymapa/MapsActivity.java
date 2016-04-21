@@ -23,6 +23,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -63,7 +64,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Polyline polilinea;
     PolylineOptions po;
     private List<LatLng> list = new ArrayList<>();
-    private List<String> listString = new ArrayList<>();
     Location location = null;
     LatLng latLong = null;
     private boolean comenzar = false;
@@ -120,7 +120,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
         map.setMyLocationEnabled(true);
-
+       // googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLong.latitude, latLong.longitude), 13));
         
         map.setOnInfoWindowClickListener(this);
     }
@@ -144,7 +144,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             location.getLongitude());
                     //Recogemos las coordenadas en un arrayList
                     list.add(latLong);
-                    listString.add(String.valueOf(latLong));
                     distancia = dame_Distancia();
                     ruta();
 
@@ -213,9 +212,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 try {
 
-                    location = map.getMyLocation();
+                   location = map.getMyLocation();
 
                     latLong = new LatLng(location.getLatitude(),location.getLongitude());
+                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLong.latitude, latLong.longitude), 20));
                     String cad = String.valueOf((latLong.latitude));
                     cad = cad.substring(0, 9);
                     String cad2 = String.valueOf((latLong.longitude));
@@ -230,7 +230,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     + "\nLongitud: " + String.valueOf(cad2)));
 
                     list.add(latLong);
-                    listString.add(String.valueOf(latLong));
 
                     ruta();
 
@@ -238,7 +237,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     biniciar.setEnabled(false);
                     bparar.setEnabled(true);
 
-                    //cronometro.setVisibility(View.VISIBLE);
+
 
                     date = (DateFormat.format("dd-MM-yyyy HH:mm:ss", new java.util.Date()).toString());
                     //Iniciar el cronómetro
@@ -278,18 +277,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             long segundos = ((SystemClock.elapsedRealtime()-cronometro.getBase())/1000)%60;
                             time =(minutos +" : "+segundos);
                             cronometro.setText(time);
-
+                            //Recoge ultimas coordenadas
                             latLong = new LatLng(location.getLatitude(),location.getLongitude());
-
+                            //Añade als coordenadas a la lista
                             list.add(latLong);
+
+                            //Codifica la loista de coordenadas en un string para gurdarlo despues en la bd
                             String polilinea = polyUtil.encode(list);
 
-                            listString.add(String.valueOf(latLong));
 
                             comenzar = false;
+                            // Cargamos los datos en el Intent
                             Intent intent = new Intent(MapsActivity.this,ResumenCarrera.class);
                             intent.putExtra("duracion",cronometro.getText());
                             intent.putExtra("date",date);
+                            intent.putExtra("distancia",distancia);
                             intent.putExtra("recorrido", po);
                             intent.putExtra("tipo",tipo);
                             intent.putExtra("polilinea",polilinea);
@@ -328,7 +330,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 po.add(list.get(i));
 
             }
-            po.color(Color.BLACK);
+            po.color(Color.GREEN);
             polilinea = map.addPolyline(po);
         } else {
             polilinea.setPoints(list);

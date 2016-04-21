@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,8 +27,13 @@ public class CarreraList extends ActionBarActivity {
     ListViewAdapter listViewAdapter;
     private GestorBD gestorbd = null;
     List<carrera> carreras = new ArrayList<carrera>();
-    private GestorBD gbd = null;
     carrera c = null;
+
+    int[] imagenes = {
+            R.drawable.andar,
+            R.drawable.correr,
+            R.drawable.bici
+    };
 
 
 
@@ -45,7 +51,7 @@ public class CarreraList extends ActionBarActivity {
         ListView listView = (ListView) findViewById(R.id.listView);
 
 
-        listViewAdapter = new ListViewAdapter(this, carreras);
+        listViewAdapter = new ListViewAdapter(this, carreras,imagenes);
         listView.setAdapter(listViewAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -73,9 +79,10 @@ public class CarreraList extends ActionBarActivity {
         LayoutInflater inflater;
         private List<carrera> carreras = null;  // Estructura con los datos
 
-        public ListViewAdapter(Activity activity, List<carrera> carreras ) {
+        public ListViewAdapter(Activity activity, List<carrera> carreras, int[] imagenes) {
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             this.carreras = carreras;
+
 
         }
 
@@ -104,6 +111,7 @@ public class CarreraList extends ActionBarActivity {
             TextView fec = (TextView) vi.findViewById(R.id.fecha);
             TextView dis = (TextView) vi.findViewById(R.id.distancia);
             TextView dur = (TextView) vi.findViewById(R.id.duracion);
+            ImageView imgImg = (ImageView) vi.findViewById(R.id.imagen);
 
 
             // Rellenar los datos
@@ -111,6 +119,16 @@ public class CarreraList extends ActionBarActivity {
             fec.setText(c.getFecha());
             dis.setText(c.getDistancia());
             dur.setText(c.getDuracion());
+            if (c.getTipo()=="Andar"){
+                imgImg.setImageResource(imagenes[0]);;
+            }else if (c.getTipo()=="Correr"){
+                imgImg.setImageResource(imagenes[1]);;
+
+            }else if (c.getTipo()=="Bici"){
+
+                imgImg.setImageResource(imagenes[2]);;
+            }
+
 
             // Devolver la fila generada y rellenada
             return vi;
