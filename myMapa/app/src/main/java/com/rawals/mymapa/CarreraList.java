@@ -62,7 +62,7 @@ public class CarreraList extends ActionBarActivity {
 
                 Intent ii = new Intent(getApplicationContext(), DetallesCarrera.class);
                 startActivity(ii);
-                finish();
+                
 
 
             }
