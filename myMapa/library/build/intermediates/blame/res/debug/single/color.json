@@ -1,5 +1,13 @@
 [
     {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_light.xml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/color/common_plus_signin_btn_text_light.xml"
+    },
+    {
         "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_light.xml",
         "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/color/common_plus_signin_btn_text_light.xml"
     },
@@ -20,12 +28,20 @@
         "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_dark.xml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/color/common_plus_signin_btn_text_dark.xml"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/color/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_dark.xml",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/color/common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/davidm/Documents/DAM/2ºDAM/Programacion multimedia y dispositivos moviles/TrackingApp/myMapa/library/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_light.xml",

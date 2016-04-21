@@ -86,6 +86,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="BORRAR CARRERA"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
         android:id="@+id/b_borrar_carrera"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"

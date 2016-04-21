@@ -36,6 +36,7 @@ import com.google.maps.android.PolyUtil;
 
 import org.json.JSONObject;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -142,17 +143,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     LatLng latLong = new LatLng(location.getLatitude(),
                             location.getLongitude());
+                    //Centra la cámara con el movimiento
+                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLong.latitude, latLong.longitude), 19));
                     //Recogemos las coordenadas en un arrayList
                     list.add(latLong);
-                    distancia = dame_Distancia();
+                    distancia = dame_Distancia()/1000;
                     ruta();
 
                 }
 
+                DecimalFormat df = new DecimalFormat();
+                df.setMaximumFractionDigits(3);
+                textdis.setText(df.format(distancia) + " km");
 
-                textdis.setText(Double.toString(distancia) + "\n km");
+                df.setMaximumFractionDigits(2);
                 float num = location.getSpeed();
-                textvel.setText(num * 3.6 + "\n km/h");   // \n
+                textvel.setText(df.format(num) + " km/h");
 
                 if (marker != null) {
                     marker.remove();
@@ -338,7 +344,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 po.add(list.get(i));
 
             }
-            po.color(Color.GREEN);
+            po.color(Color.RED);
             polilinea = map.addPolyline(po);
         } else {
             polilinea.setPoints(list);
