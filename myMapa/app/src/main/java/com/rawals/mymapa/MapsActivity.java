@@ -275,7 +275,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             cronometro.stop();
                             long minutos = ((SystemClock.elapsedRealtime()-cronometro.getBase())/1000)/60;
                             long segundos = ((SystemClock.elapsedRealtime()-cronometro.getBase())/1000)%60;
-                            time =(minutos +" : "+segundos);
+
+                            if (segundos<10){
+                                time = (minutos +" : 0"+segundos);
+                            }else {
+                                time = (minutos + " : " + segundos);
+                            }
+
                             cronometro.setText(time);
                             //Recoge ultimas coordenadas
                             latLong = new LatLng(location.getLatitude(),location.getLongitude());

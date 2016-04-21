@@ -1,5 +1,17 @@
 [
     {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/androidTest/debug/layout/webview.xml",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/bundles/debug/res/layout/webview.xml"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/androidTest/debug/layout/info_window.xml",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/bundles/debug/res/layout/info_window.xml"
+    },
+    {
+        "merged": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/res/merged/androidTest/debug/layout/text_bubble.xml",
+        "source": "/Users/8fprogmm04/Documents/TrackingApp/myMapa/library/build/intermediates/bundles/debug/res/layout/text_bubble.xml"
+    },
+    {
         "merged": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/res/merged/androidTest/debug/layout/info_window.xml",
         "source": "/Users/Ramon/Repositorio/AndroidStudio/TrackingApp/myMapa/library/build/intermediates/bundles/debug/res/layout/info_window.xml"
     },
