@@ -119,16 +119,18 @@ public class CarreraList extends ActionBarActivity {
             fec.setText(c.getFecha());
             dis.setText(c.getDistancia());
             dur.setText(c.getDuracion());
-            if (c.getTipo()=="Andar"){
-                imgImg.setImageResource(imagenes[0]);;
-            }else if (c.getTipo()=="Correr"){
-                imgImg.setImageResource(imagenes[1]);;
 
-            }else if (c.getTipo()=="Bici"){
-
-                imgImg.setImageResource(imagenes[2]);;
+            switch (c.getTipo()){
+                case "Andar":
+                    imgImg.setImageResource(imagenes[0]);
+                    break;
+                case "Correr":
+                    imgImg.setImageResource(imagenes[1]);
+                    break;
+                case "Bici":
+                    imgImg.setImageResource(imagenes[2]);
+                    break;
             }
-
 
             // Devolver la fila generada y rellenada
             return vi;

@@ -297,7 +297,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             Intent intent = new Intent(MapsActivity.this,ResumenCarrera.class);
                             intent.putExtra("duracion",cronometro.getText());
                             intent.putExtra("date",date);
-                            intent.putExtra("distancia",distancia);
+                            intent.putExtra("distancia",textdis.getText());
                             intent.putExtra("recorrido", po);
                             intent.putExtra("tipo",tipo);
                             intent.putExtra("polilinea",polilinea);
