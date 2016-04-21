@@ -158,7 +158,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 df.setMaximumFractionDigits(2);
                 float num = location.getSpeed();
-                textvel.setText(df.format(num) + " km/h");
+                textvel.setText(df.format(num * 3.6) + " km/h");
 
                 if (marker != null) {
                     marker.remove();
