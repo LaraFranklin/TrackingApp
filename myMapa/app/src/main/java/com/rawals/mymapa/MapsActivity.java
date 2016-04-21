@@ -277,9 +277,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             long segundos = ((SystemClock.elapsedRealtime()-cronometro.getBase())/1000)%60;
 
                             if (segundos<10){
-                                time = (minutos +" : 0"+segundos);
+                                time = (minutos +":0"+segundos);
                             }else {
-                                time = (minutos + " : " + segundos);
+                                time = (minutos + ":" + segundos);
                             }
 
                             cronometro.setText(time);
@@ -302,6 +302,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             intent.putExtra("tipo",tipo);
                             intent.putExtra("polilinea",polilinea);
                             startActivity(intent);
+
+                            finish();
                         }
                     })
                     .setNegativeButton("No", new DialogInterface.OnClickListener() {

@@ -75,7 +75,7 @@ public class ResumenCarrera extends AppCompatActivity implements View.OnClickLis
                 //Pasamos automaticamente al guardar a la lista de carreras
                 Intent intent = new Intent(this, CarreraList.class);
                 startActivity(intent);
-
+                finish();
                 break;
 
             case R.id.bcancelar:

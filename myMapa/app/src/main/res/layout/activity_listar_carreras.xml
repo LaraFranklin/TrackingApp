@@ -10,6 +10,16 @@
     tools:context="com.rawals.mymapa.CarreraList"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="NO HAY CARRERAS"
+        android:id="@+id/sincarreras"
+        android:layout_gravity="center"
+        />
+
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

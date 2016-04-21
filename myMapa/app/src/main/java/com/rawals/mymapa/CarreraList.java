@@ -28,6 +28,7 @@ public class CarreraList extends ActionBarActivity {
     private GestorBD gestorbd = null;
     List<carrera> carreras = new ArrayList<carrera>();
     carrera c = null;
+    TextView sincarreras;
 
     int[] imagenes = {
             R.drawable.andar,
@@ -42,7 +43,7 @@ public class CarreraList extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_carreras);
 
-
+        sincarreras = (TextView)findViewById(R.id.sincarreras);
         gestorbd = new GestorBD(this);
         gestorbd.abrirBD();
         carreras = gestorbd.leerCarreras();
@@ -50,24 +51,28 @@ public class CarreraList extends ActionBarActivity {
 
         ListView listView = (ListView) findViewById(R.id.listView);
 
+        if (carreras.size()==0){
 
-        listViewAdapter = new ListViewAdapter(this, carreras,imagenes);
-        listView.setAdapter(listViewAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView adapterView, View view, int posicion, long l) {
-                c = carreras.get(posicion);
+            sincarreras.setVisibility(View.VISIBLE);
 
-                com.setObjeto(c);
+        } else {
+            sincarreras.setVisibility(View.INVISIBLE);
+            listViewAdapter = new ListViewAdapter(this, carreras, imagenes);
+            listView.setAdapter(listViewAdapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView adapterView, View view, int posicion, long l) {
+                    c = carreras.get(posicion);
 
-                Intent ii = new Intent(getApplicationContext(), DetallesCarrera.class);
-                startActivity(ii);
-                
+                    com.setObjeto(c);
+
+                    Intent ii = new Intent(getApplicationContext(), DetallesCarrera.class);
+                    startActivity(ii);
 
 
-            }
-        });
-
+                }
+            });
+        }
 
 
     }
